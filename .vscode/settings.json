@@ -1,0 +1,20 @@
+{
+    "editor.defaultFormatter": "ms-python.python",
+    "editor.formatOnSave": true,
+    "[git-commit]": {"editor.rulers": [50]},
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        },
+        "editor.rulers": [
+            88,
+            120
+        ]
+      },
+    "isort.args":["--profile", "black"],
+    "[yaml]": {
+        "editor.defaultFormatter": "redhat.vscode-yaml"
+    },
+}

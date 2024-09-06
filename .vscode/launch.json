@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+        {
+            "name": "VS Code Container Demo",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "--JOB_NAME", "Sample"
+                    ,"--WELCOME_MESSAGE", "Hello Mr. Morellis!"
+                ],
+        },      
+        {
+            "name": "Sample Generator",
+            "type": "python",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "program": "${workspaceFolder}/auxiliary_tools/sample_generator.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "--JOB_NAME", "sample_generator"
+                    ,"--INPUT_PATH", "/workspaces/samples/data_samples/turkey_export.parquet"
+                    ,"--INPUT_FORMAT", "parquet"
+                    ,"--OUTPUT_PATH", "/workspaces/samples/data_samples/file_year_month=2022_01/"
+                    ,"--OUTPUT_FORMAT", "parquet"
+                ],
+        }
+    ]
+} 

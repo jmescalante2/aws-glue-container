@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "sample"
+version = "0.1.0"
+description = ""
+authors = ["Jose Mari Escalante <jmescalante.work@gmail.com>"]
+readme = "README.md"
+packages = [{include = "sample"}]
+
+[tool.poetry.dependencies]
+python = "~3.10.2"
+python-dateutil = "~2.8.2"
+
+boto3 = "~1.28.53"
+

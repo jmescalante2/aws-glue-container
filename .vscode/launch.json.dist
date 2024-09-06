@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Data Curator",
+            "type": "python",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "program": "${workspaceFolder}/app.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "--JOB_NAME", "data_curator"
+                    ,"--LAST_SUCCESSFUL_RUN_SSM_PARAM", "/importgenius/dev/data_curator/gme/turkey/import/last_successful_run"
+                    ,"--DATA_SOURCE_PATH", "s3://ig-data-lake-dev/test/jm/data_curator/gme/turkey_import/transformed/"
+                    ,"--DATA_DESTINATION_S3_BUCKET", "ig-data-lake-dev"
+                    ,"--DATA_DESTINATION_S3_PREFIX", "test/jm/data_curator/gme/turkey_import/curated/"
+                    ,"--DATA_SOURCE_S3_BUCKET", "ig-data-lake-dev"
+                    ,"--DATA_SOURCE_S3_PREFIX", "test/jm/data_curator/gme/turkey_import/transformed/"
+                    ,"--DOMAIN", ""
+                ],
+        },       
+        {
+            "name": "Sample Generator",
+            "type": "python",
+            "request": "launch",
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "program": "${workspaceFolder}/auxiliary_tools/sample_generator.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "args": [
+                    "--JOB_NAME", "sample_generator"
+                    ,"--INPUT_PATH", ""
+                    ,"--INPUT_FORMAT", "parquet"
+                    ,"--OUTPUT_PATH", ""
+                    ,"--OUTPUT_FORMAT", "parquet"
+                ],
+        }
+    ]
+}

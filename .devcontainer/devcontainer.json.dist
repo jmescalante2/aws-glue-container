@@ -1,0 +1,31 @@
+{
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
+  "mounts": [
+    "source=<path-to-aws-config-directory-in-host>,target=/home/glue_user/.aws,type=bind",
+    "source=<path-to-ssh-directory-in-host>,target=/home/glue_user/.ssh,type=bind"
+  ],
+  "remoteEnv": {
+    "AWS_PROFILE": "<aws-profile-to-use>",
+    "DISABLE_SSL": "true"
+  },
+  "forwardPorts": [4040, 18080],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+          "ms-python.python",
+          "eamodio.gitlens",
+          "mechatroner.rainbow-csv",
+          "redhat.vscode-yaml",
+          "ms-azuretools.vscode-docker",
+          "esbenp.prettier-vscode",
+          "ms-python.isort",
+          "ms-python.black-formatter",
+          "tamasfe.even-better-toml"
+      ]
+    }
+  },
+  "runArgs": ["--name", "data_curator"],
+  "updateRemoteUserUID": false
+}
