@@ -15,9 +15,6 @@ A pyspark application used to curate or perform client-specific, function-specif
 ### Installation
 
 1. Clone the project repository.
-   ```sh
-   git clone git@gitlab.com:importgenius/data-engineering/importgenius-glue-libraries.git
-   ```
 2. Within the service's root directory, under .devcontainer subfolder, copy devcontainer.json.dist to devcontainer.json. Replace the values enclosed by angle braces with valid configuration values.
 3. Open the VS Code's Command Palette and choose "Dev Containers: Open Folder in Container".
 4. Select the folder containing the .devcontainer subfolder.
