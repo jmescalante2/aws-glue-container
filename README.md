@@ -1,6 +1,6 @@
-## Glue Job
+## AWS Glue Container
 
-A pyspark application used to curate or perform client-specific, function-specific, and/or highly customized transformations. 
+A full-time dev container used to set up Glue and PySpark development environment. This includes installation of softwares, tools, IDE, extensions, git, and all other OS packages and dependencies, so you can focus on actual development. 
 
 ## Development
 
