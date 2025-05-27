@@ -9,7 +9,7 @@ A full-time dev container used to set up Glue and PySpark development environmen
 1. Docker version 23.0.3 or greater
 2. Tested on ubuntu 20.04.4 LTS
 3. Git version 2.25.1 or greater
-4. Visual Studio Code bu - Dev Containers v0.288.1
+4. Visual Studio Code - Dev Containers v0.288.1
 5. AWS IAM Credentials to access integrated AWS resources
 
 ### Installation
